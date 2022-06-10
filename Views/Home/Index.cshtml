@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Random Passcode Generator</h1>
+    <br>
+    <p>Random Passcode (passcode # @Context.Session.GetInt32("PasscodeGen"))</p>
+    <p class="display-2">@Context.Session.GetString("NewPasscode")</p>
+
+    <form action="generate" method="post">
+      <button type="submit" class="btn btn-primary">Generate</button>
+    </form>
+</div>
